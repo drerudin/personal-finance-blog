@@ -34,6 +34,28 @@ type Query {
   thoughts(username: String): [Thought]
   thought(_id: ID!): Thought
 }
+
+input ThoughtInput {
+  thoughtText: String!
+  username: String!
+}
+
+input ReactionInput {
+  reactionBody: String!
+  username: String!
+  thoughtId: ID!
+}
+
+input UserInput {
+  username: String!
+  email: String!
+}
+
+type Mutation {
+  createThought(thoughtInput: ThoughtInput): Thought
+  createReaction(reactionInput: ReactionInput): Thought
+  createUser(userInput: UserInput): User
+}
 `;
 
 // export the typeDefs
