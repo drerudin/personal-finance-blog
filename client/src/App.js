@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import React from 'react';
@@ -72,6 +73,16 @@ function App() {
         </div>
       </Router>
     </ApolloProvider>
+=======
+import './App.css';
+import Nav from './components/Nav';
+
+function App() {
+  return (
+    <div className="App">
+      <Nav></Nav>
+    </div>
+>>>>>>> origin/develop
   );
 }
 
